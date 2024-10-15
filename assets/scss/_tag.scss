@@ -1,0 +1,23 @@
+.label {
+    padding: 2px 4px;
+    font-size: 12px;
+    border-radius: 2px;
+    line-height: 14px;
+    font-weight: 500;
+    &._white {
+        color: #fff;
+        background-color: rgba(#fff, 0.3);
+    }
+    &._blue {
+        color: #0072B9;
+        background-color: #E6F6FA;
+    }
+    &._red {
+        color: #FF5F55;
+        background-color: #FFD2D2;
+    }
+    &._green {
+        color: #6CC100;
+        background-color: #E6FACC;
+    }
+}

@@ -58,7 +58,7 @@
         height: 50px;
         padding: 0 15px;
         border-radius: 7px;
-        font-size: 18px;
+        font-size: 15px;
         font-weight: 500;
     }
     
@@ -72,6 +72,11 @@
         &.disabled {
             background-color: lighten($c_key, 30%);
         }
+    }
+
+    &._lightBlue {
+        background-color: $c_key5;
+        color: $c_key;
     }
 
     &._black { 
