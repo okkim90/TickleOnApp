@@ -10,7 +10,7 @@
         font-weight: 500;
     }
     &.ty_mid {
-        height: 40px;
+        height: 38px;
         padding: 0 8px;
         border-radius: 7px;
         font-size: 15px;
@@ -44,7 +44,7 @@
         width: 100%;
         height: 100%;
         padding: 0 10px;
-        font-size: 14px;
+        font-size: 13px;
         border: none;
     }
     &.ty_small {
@@ -52,23 +52,23 @@
         //line-height: 31px;
         padding: 0 8px;
         border-radius: 4px;
-        font-size: 14px;
+        font-size: 13px;
         //font-weight: 500;
 
     }
     &.ty_mid {
-        height: 40px;
+        height: 38px;
         padding: 0 10px;
         border-radius: 7px;
-        font-size: 15px;
+        font-size: 13px;
         //font-weight: 500;
         
     }
     &.ty_mid2 {
-        height: 40px;
+        height: 38px;
         padding: 0 20px;
         border-radius: 7px;
-        font-size: 15px;
+        font-size: 13px;
         //font-weight: 500;
         
     }
@@ -121,7 +121,7 @@
         padding-left: 36px;
         background-color: #fff;
         background: url(../images/ico_date.svg) no-repeat left 8px center / 24px auto;
-        font-size: 14px;
+        font-size: 13px;
         cursor: pointer;
         width: 100%;
         max-width: 150px;
@@ -406,6 +406,38 @@
     &.vaT {
         vertical-align: top;
     }
+
+
+    &._blue {
+        input[type="checkbox"] {
+            &:checked ~ .f_chk_ico {
+                background-color: $c_key;
+            }
+            &:checked ~ .f_chk_txt {
+                color: $c_key;
+            }
+        }
+    }
+    &._red {
+        input[type="checkbox"] {
+            &:checked ~ .f_chk_ico {
+                background-color: $c_red2;
+            }
+            &:checked ~ .f_chk_txt {
+                color: $c_red2;
+            }
+        }
+    }
+    &._yellow {
+        input[type="checkbox"] {
+            &:checked ~ .f_chk_ico {
+                background-color: $c_yellow;
+            }
+            &:checked ~ .f_chk_txt {
+                color: $c_yellow;
+            }
+        }
+    }
     input[type="checkbox"] {
         border: 0; 
         clip: rect(0 0 0 0); 
@@ -417,17 +449,15 @@
         padding: 0; 
         position: absolute; 
         white-space: nowrap; 
-        &:checked ~ .f_chk_ico {
-            background-color: $c_font
-            
-        }
+        
+        
     }
     &_ico {
         width: 20px;
         height: 20px;
-        
+        align-self: flex-start;
         border-radius: 4px;
-        background-color: lighten($c_font, 65%);
+        background-color: #EBEBEB;
         box-sizing: border-box;
         margin-right: 8px;
         position: relative;
@@ -437,10 +467,13 @@
         flex-shrink: 0;
     }
     &_txt {
-        font-size: 14px;
+        color: #9DA6B5;
+        font-size: 13px;
+        line-height: 20px;
         //font-weight: 500;
         flex: 1;
-        @include text-hidden-single
+        font-weight: 500;
+        //@include text-hidden-single
     }
 }
 
@@ -470,6 +503,13 @@
         input { 
             &:checked + .slider {
                 background-color: $c_red2;
+            }
+        }
+    }
+    &._yellow {
+        input { 
+            &:checked + .slider {
+                background-color: $c_yellow;
             }
         }
     }
@@ -508,19 +548,24 @@
     width: 100%;
     border: 1px solid $c_line2;
     border-radius: 7px;
-    padding: 10px 20px;
-    height: 100px;
+    
+    padding: 10px;
+    height: 80px;
     overflow-y: auto;
 }
 .ta_wrap {
     position: relative;
+    border: 1px solid $c_line2;
+    border-radius: 7px;
+    padding-bottom: 26px;
     .f_ta {
-        padding-bottom: 30px;
+        border: none;
+        border-radius: none;
     }
     .count {
         position: absolute;
         right: 10px;
-        bottom: 6px;
+        bottom: 4px;
         color: $c_placeholder;
     }
 }

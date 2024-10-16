@@ -48,7 +48,7 @@
         font-weight: 500;
     }
     &.ty_mid {
-        height: 40px;
+        height: 38px;
         padding: 0 15px;
         border-radius: 7px;
         font-size: 15px;
@@ -92,9 +92,17 @@
             color: lighten($c_grey2, 40%);
         }
     }
+    &._grey2 {
+        background-color: #DBE1EA;
+        color: #F5F9FF;    
+    }
     &._red {
         background-color: $c_red2;
         color: #fff;
+    }
+    &._red2 {
+        background-color: $c_red3;
+        color: $c_red2;
     }
     &._line {
         border: 1px solid $c_line2;
@@ -197,16 +205,29 @@
 
 .chk_btn {
     position: relative;
+    overflow: hidden;
     cursor: pointer;
+    display: inline-block;
     .f_btn {
-        background-color: $c_disabled_bg;
-        color: #fff;
-        transition: background-color .1s ease-in-out;
+        background-color: #F4F7FB;
+        color: #9DA6B5;
+        transition: all .1s ease-in-out;
     }
     .inp_hidden {
         display: none;
         &:checked ~ .f_btn {
-            background-color: $c_key;    
+            @at-root .chk_set._blue & {
+                background-color: #E5EFFD;    
+                color: $c_key;
+            }
+            @at-root .chk_set._red & {
+                background-color: #FFE9E9;    
+                color: $c_red2;
+            }
+            @at-root .chk_set._yellow & {
+                background-color: #FFF8EB;    
+                color: $c_yellow;
+            }
         }
     }
 }

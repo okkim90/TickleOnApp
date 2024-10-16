@@ -83,48 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    const nav = document.querySelector('.nav');
-    const nav_close = nav.querySelector('.nav_close');
-    const nav_item = document.querySelectorAll('.nav_dep1.has_dep');
-    const btn_nav = document.querySelector('.btn_nav');
-    nav_item.forEach(e=>{
-      let nav_btn = e.querySelector('.nav_btn.dep1');
-      nav_btn.addEventListener('click',(event)=>{
-        event.preventDefault();
-        if(e.classList.contains('on')){
-          e.classList.remove('on')
-        }else{
-          e.classList.add('on')
-        }
-        
-      });
-    });
-
-
-    nav.addEventListener('click',(event)=>{
-      if(!event.target.closest('.nav_close')){
-        nav.classList.add('fixed')
-      } 
-    });
-    nav_close.addEventListener('click',()=>{
-      nav.classList.remove('fixed');
-      nav.classList.add('closed');
-      nav.classList.remove('on');
-    });
-    btn_nav.addEventListener('click',()=>{
-      nav.classList.add('on');
-    });
     
-    nav.addEventListener('mouseenter',(event)=>{
-      if(!nav.classList.contains('fixed')){
-        event.target.classList.remove('closed')
-      }
-    });
-    nav.addEventListener('mouseleave',(event)=>{
-      if(!nav.classList.contains('fixed')){
-        event.target.classList.add('closed')
-      } 
-    });
     
 });
 

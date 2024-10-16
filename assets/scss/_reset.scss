@@ -220,10 +220,10 @@ textarea:focus {
 
 textarea {
     overflow: auto;
-    padding: 22px;
+    
     resize: none;
-    font-size: 14px;
-    border: 1px solid $c_line;
+    box-sizing: border-box;
+    
 }
 
 button {
