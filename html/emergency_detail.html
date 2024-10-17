@@ -162,8 +162,11 @@
                         <span class="sticker _black">선택 항목</span>
                         <div class="detail_sec_cont">
                             <div class="attach_set">
+                                <!--[D] 이미지 첨부 전-->
                                 <div class="attach_set_ico _red"></div>
-                                <button type="button" class="f_btn ty_big _red2 w100">사진첨부</button>
+                                <!--//[D] 이미지 첨부 전-->
+                                <input type="file" accept="image/*" id="attach_file" class="attach_file">
+                                <label for="attach_file" class="f_btn ty_big _red2 w100">사진첨부</label>
                                 <ul class="list_info">
                                     <li class="list_info_item">첨부가능 용량은 파일당 5MB 미만이며, 최대 1개까지 가능합니다</li>
                                     <li class="list_info_item">첨부불가 파일 확장자 : exe, js, php, html, htm, sh</li>
@@ -177,10 +180,13 @@
                         <span class="sticker _black">선택 항목</span>
                         <div class="detail_sec_cont">
                             <div class="attach_set">
+                                <!--[D] 이미지 첨부 후-->
                                 <div class="attach_img">
                                     <img src="https://picsum.photos/500/500" alt="">
                                 </div>
-                                <button type="button" class="f_btn ty_big _red2 w100">사진수정</button>
+                                <!--//[D] 이미지 첨부 후-->
+                                <input type="file" accept="image/*" id="attach_file" class="attach_file">
+                                <label for="attach_file" class="f_btn ty_big _red2 w100">사진수정</label>
                                 <ul class="list_info">
                                     <li class="list_info_item">첨부가능 용량은 파일당 5MB 미만이며, 최대 1개까지 가능합니다</li>
                                     <li class="list_info_item">첨부불가 파일 확장자 : exe, js, php, html, htm, sh</li>
@@ -188,8 +194,6 @@
                             </div>
                         </div>
                     </div>
-                   
-                    
                 </div>
                 
             </div>

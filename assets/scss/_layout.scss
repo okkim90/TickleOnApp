@@ -94,6 +94,7 @@
         padding: 16px 16px 40px;
         background-color: $c_bg;
         border-radius: 16px 16px 0 0;
+        @include dropShadow
     }
 }
 
@@ -240,7 +241,7 @@
         background: linear-gradient(135deg, #FF5B5B 40%, #F2BD00 100%);
     }
     &.ty_customer {
-        background: linear-gradient(135deg, #FCA004 40%, #A4FF5C 100%);
+        background: linear-gradient(145deg, #FCA004 35%, #A4FF5C 100%);
     }
     &_txt {
         .tit {
@@ -553,6 +554,9 @@
         &._red {
             background-image: url(../images/ico_attach_red.svg);
         }
+        &._yellow {
+            background-image: url(../images/ico_attach_yellow.svg);
+        }
     }
     .attach_img {
         border-radius: 8px;
@@ -568,6 +572,10 @@
             height: 100%;
             object-fit: contain;
         }
+    }
+    .attach_file {
+        @include hidden
+
     }
 
 }

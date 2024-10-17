@@ -5747,6 +5747,7 @@ input::-webkit-search-results-decoration {
   padding: 16px 16px 40px;
   background-color: #F1F1F1;
   border-radius: 16px 16px 0 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
 }
 
 .login_wrap {
@@ -5885,7 +5886,7 @@ input::-webkit-search-results-decoration {
   background: linear-gradient(135deg, #FF5B5B 40%, #F2BD00 100%);
 }
 .top_set.ty_customer {
-  background: linear-gradient(135deg, #FCA004 40%, #A4FF5C 100%);
+  background: linear-gradient(145deg, #FCA004 35%, #A4FF5C 100%);
 }
 .top_set_txt .tit {
   font-size: 22px;
@@ -6182,6 +6183,9 @@ input::-webkit-search-results-decoration {
 .attach_set_ico._red {
   background-image: url(../images/ico_attach_red.svg);
 }
+.attach_set_ico._yellow {
+  background-image: url(../images/ico_attach_yellow.svg);
+}
 .attach_set .attach_img {
   border-radius: 8px;
   overflow: hidden;
@@ -6194,6 +6198,19 @@ input::-webkit-search-results-decoration {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+.attach_set .attach_file {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
 }
 
 .list_info_item {
@@ -6700,6 +6717,7 @@ input::-webkit-search-results-decoration {
   vertical-align: top;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .f_btn.disabled {
   cursor: not-allowed;
