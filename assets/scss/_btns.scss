@@ -37,7 +37,7 @@
     &.disabled {
         cursor: not-allowed;
         pointer-events: none;
-        opacity: 0.6;
+        //opacity: 0.6;
     }
     &.ty_small {
         height: 24px;
@@ -65,18 +65,27 @@
     &._key2 {
         background-color: $c_key2;
         color: $c_font2;
+        &.disabled {
+            background-color: #DBE1EA;
+            color: #F5F9FF;    
+        }
     }
     &._blue {
         background-color: $c_key;
         color: #fff;
         &.disabled {
-            background-color: lighten($c_key, 30%);
+            background-color: #DBE1EA;
+            color: #F5F9FF;    
         }
     }
 
-    &._lightBlue {
+    &._blue2 {
         background-color: $c_key5;
         color: $c_key;
+        &.disabled {
+            background-color: #DBE1EA;
+            color: #F5F9FF;    
+        }
     }
 
     &._black { 
@@ -89,29 +98,48 @@
         color: #fff;  
        
         &.disabled {
-            color: lighten($c_grey2, 40%);
+            background-color: #DBE1EA;
+            color: #F5F9FF;    
         }
-    }
-    &._grey2 {
-        background-color: #DBE1EA;
-        color: #F5F9FF;    
     }
     &._red {
         background-color: $c_red2;
         color: #fff;
+        &.disabled {
+            background-color: #DBE1EA;
+            color: #F5F9FF;    
+        }
     }
     &._red2 {
         background-color: $c_red3;
         color: $c_red2;
+        &.disabled {
+            background-color: #DBE1EA;
+            color: #F5F9FF;    
+        }
+    }
+    &._yellow {
+        background-color: $c_yellow;
+        color: #fff;
+        &.disabled {
+            background-color: #DBE1EA;
+            color: #F5F9FF;    
+        }
+    }
+    &._yellow2 {
+        background-color: $c_yellow2;
+        color: $c_yellow;
+        &.disabled {
+            background-color: #DBE1EA;
+            color: #F5F9FF;    
+        }
     }
     &._line {
         border: 1px solid $c_line2;
         background-color: #fff;
         &.disabled {
-            cursor: not-allowed;
-            pointer-events: none;
-            opacity: 0.5;
-            background-color: $c_line2;
+            background-color: #DBE1EA;
+            color: #F5F9FF;    
         }
     }
     &._line2 {

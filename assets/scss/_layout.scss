@@ -237,7 +237,10 @@
         background: linear-gradient(135deg, #0134FF 0%, #00AC83 100%);
     }  
     &.ty_emergency {
-        background: linear-gradient(135deg, #FF5B5B 0%, #F2BD00 100%);
+        background: linear-gradient(135deg, #FF5B5B 40%, #F2BD00 100%);
+    }
+    &.ty_customer {
+        background: linear-gradient(135deg, #FCA004 40%, #A4FF5C 100%);
     }
     &_txt {
         .tit {
@@ -352,7 +355,10 @@
         background: linear-gradient(135deg, #0134FF 0%, #00AC83 100%);
     }  
     &.ty_emergency {
-        background: linear-gradient(135deg, #FF5B5B 0%, #F2BD00 100%);
+        background: #FF5B5B;
+    }
+    &.ty_customer {
+        background: #FCA004
     }
     &_tit {
         text-align: center;
@@ -397,6 +403,21 @@
                 margin-right: 4px;
             }
         }
+        .location {
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            &::before {
+                content:'';
+                width: 9px;
+                height: 18px;
+                background-image: url(../images/ico_loc_w.svg);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+                margin-right: 4px;
+            }
+        }
     }
 }
 
@@ -420,7 +441,7 @@
     gap: 8px;
     align-items: center;
     flex-wrap: wrap;
-    //border: 1px solid $c_line;
+    border: 1px solid $c_line;
     @include dropShadow;
 
 
@@ -487,6 +508,19 @@
     &_cont {
         padding: 16px;
     }
+    &_info {
+        padding: 16px;
+        border-radius: 0 0 8px 8px;
+        &._red {
+            background-color: $c_red3;
+            color: $c_red2;
+        }
+        &._yellow {
+            background-color: $c_yellow2;
+            color: $c_yellow;
+        }
+        
+    }
 }
 .chk_list {
     &_item {
@@ -516,6 +550,9 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-image: url(../images/ico_attach.svg);
+        &._red {
+            background-image: url(../images/ico_attach_red.svg);
+        }
     }
     .attach_img {
         border-radius: 8px;
@@ -545,6 +582,33 @@
             content: '※';
             flex-shrink: 0;
             margin-right: 4px;
+        }
+    }
+}
+
+.no_data {
+    display: flex;
+    padding: 80px 16px;
+    background-color: #fff;
+    border-radius: 8px;
+    @include dropShadow;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    
+    &_ico {
+        width: 100px;
+        height: 100px;
+        
+        background-repeat: no-repeat;
+        background-position: center center;
+        &._red {
+            background-image: url(../images/ico_no_data_red.svg);
+        }
+        &._yellow {
+            background-image: url(../images/ico_no_data_yellow.svg);
         }
     }
 }

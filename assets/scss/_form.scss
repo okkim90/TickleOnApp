@@ -1,5 +1,5 @@
 .f_select {
-    border: 1px solid $c_line2;
+    border: 1px solid $c_line;
     background-color: #fff;
     &.ty_small {
         height: 33px;
@@ -26,7 +26,7 @@
 }
 
 .f_input {
-    border: 1px solid $c_line2;
+    border: 1px solid $c_line;
     max-width: 100%;
     text-overflow: ellipsis;
     background-color: #fff;
@@ -546,16 +546,16 @@
 
 .f_ta {
     width: 100%;
-    border: 1px solid $c_line2;
+    border: 1px solid $c_line;
     border-radius: 7px;
-    
+    font-size: 13px;
     padding: 10px;
-    height: 80px;
+    height: 60px;
     overflow-y: auto;
 }
 .ta_wrap {
     position: relative;
-    border: 1px solid $c_line2;
+    border: 1px solid $c_line;
     border-radius: 7px;
     padding-bottom: 26px;
     .f_ta {
