@@ -1,19 +1,19 @@
-.btn_tab {
-    padding: 0 20px;
-    height: 48px;
-    line-height: 48px;
-    border-radius: 15px;
-    font-weight: 500;
-    font-size: 14px;
-    &.on {
-        background-color: $c_key;
-    }
-    &2 {
-        font-size: $fz_8;
-        font-weight: bold;
-        color: $c_placeholder;
+.tabs {
+    display: flex;
+
+    .tab_btn {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex: 1;
+        background-color: #fff;
+        font-size: 14px;
+        font-weight: 500;
         &.on {
-            color: $c_font;
+            background-color: $c_key;
+            color: #fff;
         }
     }
 }
@@ -143,24 +143,13 @@
             color: #F5F9FF;    
         }
     }
-    &._line2 {
-        border: 1px solid $c_grey;
+    &._line_blue {
+        border: 1px solid $c_key;
         background-color: #fff;
+        color: $c_key;
         &.disabled {
-            cursor: not-allowed;
-            pointer-events: none;
-            opacity: 0.5;
-            background-color: $c_line2;
-        }
-    }
-    &._line3 {
-        border: 1px solid $c_line2;
-        background-color: $c_bg;
-        &.disabled {
-            cursor: not-allowed;
-            pointer-events: none;
-            opacity: 0.5;
-            background-color: $c_line2;
+            background-color: #DBE1EA;
+            color: #F5F9FF;    
         }
     }
 

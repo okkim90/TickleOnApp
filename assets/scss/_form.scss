@@ -1,27 +1,27 @@
 .f_select {
     border: 1px solid $c_line;
     background-color: #fff;
-    &.ty_small {
-        height: 33px;
-        //line-height: 31px;
-        padding: 0 8px;
-        border-radius: 4px;
-        font-size: 14px;
-        font-weight: 500;
-    }
+    background-image: url(../images/arrow_select.svg);
+    background-repeat: no-repeat;
+    
+   
     &.ty_mid {
         height: 38px;
-        padding: 0 8px;
+        padding: 0 10px;
+        padding-right: 30px;
         border-radius: 7px;
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 500;
+        background-position: right 10px center;
     }
     &.ty_big {
         height: 50px;
-        padding: 0 10px;
+        padding: 0 20px;
+        padding-right: 40px;
         border-radius: 7px;
         font-size: 15px;
         font-weight: 500;
+        background-position: right 20px center;
     }
 }
 
@@ -183,218 +183,7 @@
     font-style: normal;
     color: $c_red;
 }
-.srch_box {
-    display: flex;
-    align-items: center;
-    width: 440px;
-    &.w100 {
-        width: 100%;
-    }
-    .f_input {
-        flex: 1;
-    }
-    &_btn {
-        margin-left: 4px;
-    }
-    .srch_set {
-        flex: 1;
-    }
-}
-.srch_set {
-    position: relative;
-    &.no_ac {
-        .f_input {
-            padding-right: 20px;
-        }
-    }
-    .f_input {
-        padding-right: 60px;
-        
-    }
-    .srch_list {
-        position: absolute;
-        width: 100%;
-        left: 0;
-        border-radius: 7px;
-        background-color: #fff;
-        overflow: hidden;
-        box-shadow: 0 0 10px rgba(#000, .1);
-        margin-top: 8px;
-        display: none;
-        z-index: 99;
-        @at-root .tbl & {
-            z-index: 10;
-        }
-        &.on {
-            display: block;
-            z-index: 999;
-        }
-        &_item {
-            padding: 0 20px;
-            height: 40px;
-           
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            user-select: none;
-            &:hover {
-                background-color: $c_bg;
-            }
-            &::before {
-                content: '';
-                width: 30px;
-                height: 30px;
-                background-image: url(../images/ico_srch2.svg);
-                background-repeat: no-repeat;
-                background-position: center center;
-                margin-right: 8px;
-            }
-            .txt {
-                flex: 1;
-                min-width: 0;
-                @include text-hidden-single;
-            }
-        }
-    }
-    .srch_close {
-        position: absolute;
-        width: 30px;
-        height: 30px;
-        right: 10px;
-        top: 50%;
-        margin-top: -15px;
-        border-radius: 50%;
-        background-image: url(../images/ico_srch_close.svg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        display: none;
-        &.on {
-            display: block;
-        }
-        &:hover {
-            background-color: #f5f5f5;
-        }
-    }
-    .srch_arrow {
-        position: absolute;
-        width: 24px;
-        height: 24px;
-        top: 50%;
-        margin-top: -12px;
-        right: 10px;
-        background-image: url(../images/arrow_select2.svg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        &.on {
-            transform: rotate(180deg);
-        }
-    }
-    .srch_ico {
-        width: 30px;
-        height: 30px;
-        background-image: url(../images/ico_search.svg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        position: absolute;
-        left: 6px;
-        top: 50%;
-        margin-top: -15px;
-        background-size: 21px;
-    }
 
-    .srch_select {
-        position: absolute;
-        width: 100%;
-        left: 0;
-        border-radius: 7px;
-        background-color: #fff;
-        overflow: hidden;
-        box-shadow: 0 0 10px rgba(#000, .1);
-        margin-top: 8px;
-        display: none;
-        z-index: 99;
-        @at-root .tbl & {
-            z-index: 10;
-        }
-        .desc {
-            padding: 10px 14px; 
-            border-bottom: 1px solid $c_line;
-        }
-        &.on {
-            display: block;
-            z-index: 999;
-            @at-root .tbl & {
-                z-index: 10;
-            }
-        }
-        &_item {
-            padding: 0 14px;
-            &.ty_all {
-                border-bottom: 1px solid $c_line;
-            }
-            &:hover {
-                background-color: $c_key2;
-            }
-        }
-        .f_chk {
-            line-height: 40px;
-            width: 100%;
-        }
-        &_bot {
-            padding: 16px 14px;
-            border-top: 1px solid $c_line;
-        }
-        &_list {
-            max-height: 160px;
-            overflow-y: auto;
-            
-        }
-    }
-    &.ty_select {
-       
-        .f_input {
-            padding-left: 38px;
-            padding-right: 70px;
-            color: $c_key;
-        }
-        .srch_close {
-            width: 24px;
-            height: 24px;
-            right: 34px;
-            margin-top: -12px;
-        }
-    }
-}
-
-
-.form_set {
-    & + & {
-        margin-top: 30px;
-    }
-    &_tit {
-        display: block;
-        font-size: $fz_4;
-        font-weight: 500;
-        margin-bottom: 10px;
-    }
-}
-
-
-.form_wrap {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px 32px ;
-    padding: 16px;
-    border-radius: 4px;
-    background-color: $c_key2;
-    border: 1px solid $c_line;
-}
-
-.form_alert {
-    font-size: 11px;
-    margin-top: 6px;
-}
 
 .f_chk {
     display: inline-flex;

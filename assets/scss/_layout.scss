@@ -1,12 +1,21 @@
 #wrap {
     background-color: $c_bg;
+    width: 100%;
     max-width: 720px;
     min-height: 100dvh;
     position: relative;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(320px,1fr);
+    grid-template-rows: 54px 1fr;
+    grid-template-areas:
+      "header"
+      "container"
+    ;
 }
 
 .header {
+    grid-area: header;
     position: sticky;
     width: 100%;
     height: 54px;
@@ -40,13 +49,19 @@
         }
     }
 }
-
+#container {
+    grid-area: container;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
 
 .top_notice {
     padding: 8px 20px;
     font-size: $fz_1;
     background-color: #fff;
+    flex-shrink: 0;
     &_box {
         border: 1px solid $c_line;
         height: 40px;
@@ -89,7 +104,7 @@
 .contents {
     //padding: 0 20px;
     border-top: 1px solid $c_line;
-    min-height: calc(100dvh - 180px);
+    flex: 1;
     &_wrap {
         padding: 16px 16px 40px;
         background-color: $c_bg;
@@ -242,6 +257,7 @@
     }
     &.ty_customer {
         background: linear-gradient(145deg, #FCA004 35%, #A4FF5C 100%);
+        padding: 24px 16px 40px;
     }
     &_txt {
         .tit {
@@ -618,5 +634,47 @@
         &._yellow {
             background-image: url(../images/ico_no_data_yellow.svg);
         }
+    }
+}
+
+.notice_view {
+    background-color: #fff;
+    padding-bottom: 30px;
+    //margin: 0 -16px;
+    
+    min-height: 100%;
+    &_top {
+        padding: 20px;
+        .tit {
+            font-size: 20px;
+            .ico_new {
+                display: inline-block;
+                vertical-align: top;
+                flex-shrink: 0;
+                margin-top: 3px;
+                margin-left: 2px;
+                width: 24px;
+                height: 24px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                background-image: url(../images/ico_new.svg);
+            }
+        }
+        .date {
+            font-size: 11px;
+            color: $c_grey;
+            margin-top: 8px;
+            line-height: 14px;
+        }
+    }
+    &_cont {
+        padding: 20px;
+        border-top: 1px solid $c_line;
+        font-size: 14px;
+    }
+    &_bot {
+        padding: 20px;
+        border-top: 1px solid $c_line;
     }
 }

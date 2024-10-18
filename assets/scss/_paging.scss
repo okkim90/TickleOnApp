@@ -1,7 +1,7 @@
 .paging {
     &_wrap {
         display: flex;
-        margin-top: 20px;
+        margin-top: 16px;
         align-items: center;
         justify-content: center;
         text-align: center;
@@ -12,12 +12,12 @@
     }
     &_btn {
         
-        min-width: 32px;
-        height: 32px;
+        min-width: 28px;
+        height: 28px;
         //padding: 0 4px;
         box-sizing: border-box;
-        border-radius: 16px;
-        line-height: 30px;
+        border-radius: 14px;
+        line-height: 26px;
         font-size: 13px;
         color: $c_font;
         border: 1px solid $c_line2;
@@ -28,27 +28,13 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-color: #fff;
-        @include mobile { 
-            min-width: 26px;
-            height: 26px;
-            line-height: 24px;
-            font-size: 12px;
-            border-radius: 13px;
-        }
+        
 
-        &:hover {
-            background-color: $c_key6;
-            //color: #fff;
-        }
+        
         &.paging_nav {
-            width: 32px;
-            height: 32px;
-            min-width: 32px;
-            @include mobile { 
-                width: 26px;
-                height: 26px;
-                min-width: 26px;
-            }
+            width: 28px;
+            height: 28px;
+            min-width: 28px; 
         }
         
         &.ty_first {
