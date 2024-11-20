@@ -52,59 +52,53 @@
                     <div class="d_flex ai_b mb8">
                         <span class="date fz_1 fc_grey2">2024. 10. 08 (화)</span>
                     </div>
-                    
-                    <div class="detail_sec">
-                        <div class="detail_sec_cont">
-                            <div class="d_flex ty_col _gapY8">
-                                <div class="chk_set _blue"> 
-                                    <div class="chk_set_txt">손소독제 확인했나요?</div>
-                                    <div class="btn_set ">
-                                        <label class="chk_btn">
-                                            <input type="radio" name="x1" class="inp_hidden" onclick="chk_btn(this)">
-                                            <span class="f_btn ty_mid">아니요</span>
-                                        </label>
-                                        <label class="chk_btn">
-                                            <input type="radio" name="x1" class="inp_hidden" onclick="chk_btn(this)">
-                                            <span class="f_btn ty_mid">예</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="chk_set _blue"> 
-                                    <div class="chk_set_txt">손소독제 확인했나요?</div>
-                                    <div class="btn_set">
-                                        <label class="chk_btn">
-                                            <input type="radio" name="x2" class="inp_hidden" onclick="chk_btn(this)">
-                                            <span class="f_btn ty_mid">아니요</span>
-                                        </label>
-                                        <label class="chk_btn">
-                                            <input type="radio" name="x2" class="inp_hidden" onclick="chk_btn(this)">
-                                            <span class="f_btn ty_mid">예</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="chk_set _blue"> 
-                                    <div class="chk_set_txt">손소독제 확인했나요?</div>
-                                    <div class="btn_set">
-                                        <label class="chk_btn">
-                                            <input type="radio" name="x3" class="inp_hidden" onclick="chk_btn(this)">
-                                            <span class="f_btn ty_mid">아니요</span>
-                                        </label>
-                                        <label class="chk_btn">
-                                            <input type="radio" name="x3" class="inp_hidden" onclick="chk_btn(this)">
-                                            <span class="f_btn ty_mid">예</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <script>
-                                    function chk_btn(target){
-                                        const chk_set = target.closest('.chk_set');
-                                        chk_set.classList.add('checked')
-                                    }
-                                </script>
+                    <div class="d_flex ty_col _gapY8">
+                        <div class="chk_set _blue"> 
+                            <div class="chk_set_txt">손소독제 확인했나요?</div>
+                            <div class="btn_set ">
+                                <label class="chk_btn">
+                                    <input type="radio" name="x1" class="inp_hidden" onclick="chk_btn(this)">
+                                    <span class="f_btn ty_mid">아니요</span>
+                                </label>
+                                <label class="chk_btn">
+                                    <input type="radio" name="x1" class="inp_hidden" onclick="chk_btn(this)">
+                                    <span class="f_btn ty_mid">예</span>
+                                </label>
                             </div>
                         </div>
+                        <div class="chk_set _blue"> 
+                            <div class="chk_set_txt">손소독제 확인했나요?</div>
+                            <div class="btn_set">
+                                <label class="chk_btn">
+                                    <input type="radio" name="x2" class="inp_hidden" onclick="chk_btn(this)">
+                                    <span class="f_btn ty_mid">아니요</span>
+                                </label>
+                                <label class="chk_btn">
+                                    <input type="radio" name="x2" class="inp_hidden" onclick="chk_btn(this)">
+                                    <span class="f_btn ty_mid">예</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="chk_set _blue"> 
+                            <div class="chk_set_txt">손소독제 확인했나요?</div>
+                            <div class="btn_set">
+                                <label class="chk_btn">
+                                    <input type="radio" name="x3" class="inp_hidden" onclick="chk_btn(this)">
+                                    <span class="f_btn ty_mid">아니요</span>
+                                </label>
+                                <label class="chk_btn">
+                                    <input type="radio" name="x3" class="inp_hidden" onclick="chk_btn(this)">
+                                    <span class="f_btn ty_mid">예</span>
+                                </label>
+                            </div>
+                        </div>
+                        <script>
+                            function chk_btn(target){
+                                const chk_set = target.closest('.chk_set');
+                                chk_set.classList.add('checked')
+                            }
+                        </script>
                     </div>
-                    
                     <div class="detail_sec mt8">
                         <div class="detail_sec_tit">체크항목 타이틀 입니다.</div>
                         <div class="detail_sec_cont">
